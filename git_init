@@ -1,0 +1,23 @@
+
+[init]
+
+[add remote]
+git remote -v
+git remote add origin_ee https://gitee.com/qqiwei/my_notes.git
+git remote add origin_hub https://github.com/qqiwei/my_notes.git
+
+[fetch]
+git checkout -b main origin_ee/main
+git pull origin_hub main
+
+[push]
+git push -f origin_ee main:main
+git push -f origin_hub main:main
+
+
+[commit]
+git add .
+git commit --amend
+git commit -am "add something"
+
+
